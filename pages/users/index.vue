@@ -9,7 +9,7 @@
         <font-awesome-icon icon="fa-solid fa-circle-info" class="mr-5 text-sm"/>
         <p>About</p>
       </button>
-      <button @click="users()" class="px-7 py-4 flex items-center selected w-full">
+      <button @click="usersPage()" class="px-7 py-4 flex items-center selected w-full">
         <font-awesome-icon icon="fa-solid fa-user-group" class="mr-5 text-sm"/>
         <p>Users</p>
       </button>
@@ -114,7 +114,6 @@ export default Vue.extend({
     async getUsers () {
       await this.$axios.$get('users').then((response: any) => {
         this.users = response.data
-        console.log(this.users)
       })
     },
     getDetail (id: any) {
@@ -123,7 +122,7 @@ export default Vue.extend({
     about () {
       this.$router.push('/about')
     },
-    users () {
+    usersPage () {
       this.$router.push('/users')
     }
   }
