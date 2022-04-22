@@ -1,11 +1,17 @@
 <template>
-  <Tutorial/>
+  <div />
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'IndexPage'
+  mounted () {
+    this.$router.push('/users')
+  }
 })
 </script>
+
+<style lang="scss">
+
+</style>
