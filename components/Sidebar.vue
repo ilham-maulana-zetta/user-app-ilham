@@ -1,9 +1,9 @@
 <template>
     <div class="sidenav w-sidenav-sm md:w-sidenav-md h-screen py-4">
-      <div class="flex items-center space-x-4 px-6">
+      <button @click="users()" class="flex items-center space-x-4 px-6">
         <img src="../assets/aone.png" alt="" class="h-auto md:h-20">
         <p class="text-white font-semibold text-2xl hidden md:flex">AOne</p>
-      </div>
+      </button>
       <button @click="about()" class="mt-8 px-7 py-4 flex items-center w-full" v-bind:class="{ 'selected': this.$route.path.includes('/about') }">
         <font-awesome-icon icon="fa-solid fa-circle-info" class="text-sm"/>
         <p class="hidden md:flex ml-5">About</p>
