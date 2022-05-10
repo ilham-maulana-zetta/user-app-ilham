@@ -1,30 +1,9 @@
 <template>
   <section class="flex flex-row w-screen h-screen font-display">
-    <div class="sidenav h-screen py-4">
-      <div class="flex items-center space-x-4 px-6">
-        <img src="../../assets/aone.png" alt="" class="h-20">
-        <p class="text-white font-semibold text-2xl">AOne</p>
-      </div>
-      <button @click="about()" class="mt-8 px-7 py-4 flex items-center w-full selected">
-        <font-awesome-icon icon="fa-solid fa-circle-info" class="mr-5 text-sm"/>
-        <p>About</p>
-      </button>
-      <button @click="users()" class="px-7 py-4 flex items-center w-full">
-        <font-awesome-icon icon="fa-solid fa-user-group" class="mr-5 text-sm"/>
-        <p>Users</p>
-      </button>
-    </div>
+    <Sidebar />
     <div class="content h-screen overflow-y-auto px-7 py-9">
-      <div class="flex justify-between w-full">
-        <p class="text-2xl font-bold">About</p>
-        <div class="flex space-x-2 items-center">
-              <p class="text-sm">Jones Ferdinand</p>
-              <div class="border-gray-200 border-2 rounded-full">
-                <img src="../../assets/ava.png" alt="" class="h-10 border-white border-2 rounded-full">
-              </div>
-        </div>
-      </div>
-      <div class="w-full grid grid-cols-2 gap-10 mt-12">
+      <Navbar title='About'/>
+      <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 mt-12">
           <div class="flex flex-col w-full text-sm">
               <p class="text-xl font-semibold">Lorem ipsum dolor sit amet</p>
               <p class="mt-6">
@@ -41,20 +20,12 @@
 </template>
 
 <style lang="css">
-  .sidenav {
-    width: 255px;
-    background: #363740;
-    color: #A4A6B3;
-  }
+
 
   .content {
-    width: calc(100vw - 255px);
+    width: 100%;
     background: #F7F8FC;
     color: #252733;
-  }
-
-  .selected {
-    background: #505050;
   }
 
   th {
@@ -81,7 +52,6 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import axios from '@nuxtjs/axios'
 
 export default Vue.extend({
   data () {
@@ -93,12 +63,7 @@ export default Vue.extend({
 
   },
   methods: {
-    about () {
-      this.$router.push('/about')
-    },
-    users () {
-      this.$router.push('/users')
-    }
+
   }
 })
 </script>

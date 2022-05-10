@@ -34,7 +34,8 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    // '@nuxtjs/vuetify',
   ],
 
 
@@ -53,7 +54,7 @@ export default {
   ],
 
   axios: {
-    baseURL: process.env.API_URL || 'https://reqres.in/api'
+    baseURL: process.env.API_URL
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

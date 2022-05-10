@@ -7,6 +7,10 @@ module.exports = {
     extend: {
       fontFamily: {
         display: ['Mulish', ...defaultTheme.fontFamily.sans]
+      },
+      width: {
+        'sidenav-sm': '100px',
+        'sidenav-md': '255px'
       }
     }
   },
