@@ -17,11 +17,11 @@
             </thead>
             <tbody>
               <tr v-for="(item, idx) in users" :key="`${idx}`">
-                <td>
+                <td class="p-4 lg:px-8 lg:py-6">
                   <img
                     :src="item.avatar"
                     alt=""
-                    class="h-10 w-10 rounded-full"
+                    class="max-h-10 max-w-10 rounded-full"
                   />
                 </td>
                 <td>{{ item.first_name }}</td>
